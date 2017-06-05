@@ -15,3 +15,7 @@
 .hovered {
     background-color: yellow;
 }
+
+#clearButton {
+    margin-bottom: 5px;
+}
