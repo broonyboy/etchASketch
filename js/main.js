@@ -4,5 +4,9 @@ $(document).ready(function () {
            var unit = $("<div class='unit'></div>");
            unit.appendTo('#wrapper');
        }
-   }   
+   }  
+
+    $('#wrapper div').on('mouseenter', function() {
+        $(this).addClass('hovered');
+    }); 
 });
