@@ -1,15 +1,16 @@
 #board {
     background-color: red;
-    height: 300px;
-    width: 192px;
+    // height: 600px;
+    // width: 600px;
 }
+
 
 .unit {
     background-color: blue;
-    height: 10px;
-    width: 10px;
-    margin: 1px;
-    display: inline-block;
+    margin-top: 0;
+    margin-bottom: 0;
+    // margin: 1px;
+    float: left;
 }
 
 .hovered {
@@ -18,4 +19,8 @@
 
 #clearButton {
     margin-bottom: 5px;
+}
+
+body {
+    margin: 0;
 }
