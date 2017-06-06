@@ -1,7 +1,10 @@
+randTrue=false;
+
 $(document).ready(function () {
    gridSize = 16;
    drawBoard(gridSize);
-   randTrue=false;
+    etch();
+   
 
     /* $('#board div').on('mouseenter', function() {
         $(this).addClass('hovered');
@@ -16,6 +19,7 @@ function clearBoard() {
     var gridSize = prompt('I have cleared the grid, what size do you want your new one.');
     $('.unit').removeClass('hovered');
     $('#board').empty();
+    randTrue=false;
     drawBoard(gridSize);
     etch();
 }
@@ -28,7 +32,6 @@ function drawBoard(gridSize) {
     var divWidth = gridSize * horiSize;
     $('#board').css('height', divHeight);
     $('#board').css('width', divWidth);
-    console.log(horiSize,vertSize);
     for (var i=0; i<gridSize; i++) {
         for (var x=0; x<gridSize; x++) {
             var unit = $("<div class='unit' style = 'height: " + vertSize + "px; width: " + horiSize + "px;' ></div>");
@@ -38,11 +41,14 @@ function drawBoard(gridSize) {
 }
 
 function etch() {
+    console.log(randTrue);
     $('#board div').on('mouseenter', function() {
         $(this).addClass('hovered')
-        if (randTrue = true) {
+        if (randTrue === true) {
             changeColour();
             $(this).css("background-color",colour);
+        } else {
+            $(this).css("background-color",'#ffff00'); 
         }
     });
 }
